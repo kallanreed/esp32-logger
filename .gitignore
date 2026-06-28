@@ -1,0 +1,8 @@
+.DS_Store
+**/.DS_Store
+firmware/.pio/
+firmware/.vscode/
+
+out/
+venv/
+__pycache__
