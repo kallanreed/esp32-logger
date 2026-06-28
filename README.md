@@ -93,7 +93,6 @@ cd firmware
 pio test -e native
 ```
 
-## Existing tools
+## Other tools
 
 - `tools/capture.py` — host-side UART → pcap demux (see above).
-- `tools/decode_ws.py` — offline WebSocket frame decoder for old text-formatted logs.
