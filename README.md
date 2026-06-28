@@ -10,12 +10,11 @@ ESP32-WROOM firmware that stands up an isolated SoftAP for IoT devices, NATs the
 - Sets the DHCP server to advertise a working public DNS resolver (1.1.1.1 by default) so clients don't get stuck on the gateway's address.
 - Captures the full Ethernet frame of every packet entering or leaving the AP interface and streams it host-side as classic pcap, ready for Wireshark/tshark/scapy.
 
-## Important limits
+## Capture details
 
-- For **your own lab/debugging network only**.
-- HTTPS/TLS and other encrypted application protocols are **not decrypted** — you get the ciphertext.
-- Capture happens at the IP layer after NAPT (so client IPs are visible in both directions). 802.11 management frames are not captured.
-- One client perspective: only the AP interface is mirrored. Upstream-side broadcasts on the STA network are not included.
+- Capture happens at the IP layer after NAPT, so client IPs are visible in both directions. 802.11 management frames are not captured.
+- Only the AP interface is mirrored. Upstream-side broadcasts on the STA network are not included.
+- HTTPS/TLS payload is not decrypted — you see ciphertext.
 
 ## Configure credentials
 
